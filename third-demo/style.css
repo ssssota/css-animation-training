@@ -1,0 +1,59 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.obj {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.obj div {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    /* animation: slide 2s ease 0s infinite; */
+}
+.obj div::before,
+.obj div::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.obj div::before { background: #999; }
+.obj div::after { background: #333; }
+
+.obj div:nth-child(1) { top: 0%; }
+.obj div:nth-child(2) { top: 25%; }
+.obj div:nth-child(3) { top: 50%; }
+.obj div:nth-child(4) { top: 75%; }
+
+.obj div:nth-child(1)::before { animation: slide-a 2s ease 0s infinite; }
+.obj div:nth-child(2)::before { animation: slide-a 2s ease 0.5s infinite; }
+.obj div:nth-child(3)::before { animation: slide-a 2s ease 1s infinite; }
+.obj div:nth-child(4)::before { animation: slide-a 2s ease 1.5s infinite; }
+
+.obj div:nth-child(1)::after { animation: slide-b 2s ease 0s infinite; }
+.obj div:nth-child(2)::after { animation: slide-b 2s ease 0.5s infinite; }
+.obj div:nth-child(3)::after { animation: slide-b 2s ease 1s infinite; }
+.obj div:nth-child(4)::after { animation: slide-b 2s ease 1.5s infinite; }
+
+@keyframes slide-a {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+}
+
+
+@keyframes slide-b {
+    0% { transform: scaleY(1); }
+    40% { transform: scaleY(0); }
+    60% { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+}
