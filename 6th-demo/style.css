@@ -1,0 +1,67 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.obj {
+    position: relative;
+    width: 50vmin;
+    height: 50vmin;
+    top: calc(50vh - 25vmin);
+    left: calc(50vw - 25vmin);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.obj div {
+    position: relative;
+    width: 25%;
+    height: 25%;
+
+    background: #666;
+    border-radius: 50%;
+}
+
+.obj div::before {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.obj div:nth-child(1)::before { content: '1'; }
+.obj div:nth-child(2)::before { content: '2'; }
+.obj div:nth-child(3)::before { content: '3'; }
+.obj div:nth-child(4)::before { content: '4'; }
+.obj div:nth-child(5)::before { content: '5'; }
+.obj div:nth-child(6)::before { content: '6'; }
+.obj div:nth-child(7)::before { content: '7'; }
+.obj div:nth-child(8)::before { content: '8'; }
+.obj div:nth-child(9)::before { content: '9'; }
+.obj div:nth-child(10)::before { content: '10'; }
+.obj div:nth-child(11)::before { content: '11'; }
+.obj div:nth-child(12)::before { content: '12'; }
+.obj div:nth-child(13)::before { content: '13'; }
+.obj div:nth-child(14)::before { content: '14'; }
+.obj div:nth-child(15)::before { content: '15'; }
+.obj div:nth-child(16)::before { content: '16'; }
+
+.obj div:nth-child(1):hover { animation: size 1s ease-in-out 0s infinite; }
+.obj div:nth-child(2):hover { animation: rotate 1s linear 0s infinite; }
+
+@keyframes size {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.75); }
+    100% { transform: scale(1); }
+}
+
+@keyframes rotate {
+    0% { transform: rotateX(0deg); }
+    30% { transform: rotateX(90deg); }
+    50% { transform: rotateX(180deg); }
+    70% { transform: rotateX(270deg); }
+    100% { transform: rotateX(360deg); }
+}

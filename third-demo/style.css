@@ -34,15 +34,15 @@ html, body {
 .obj div:nth-child(3) { top: 50%; }
 .obj div:nth-child(4) { top: 75%; }
 
-.obj div:nth-child(1)::before { animation: slide-a 2s ease 0s infinite; }
-.obj div:nth-child(2)::before { animation: slide-a 2s ease 0.5s infinite; }
-.obj div:nth-child(3)::before { animation: slide-a 2s ease 1s infinite; }
-.obj div:nth-child(4)::before { animation: slide-a 2s ease 1.5s infinite; }
+.obj div:nth-child(1)::before { animation: slide-a 2s ease-in-out 0s infinite; }
+.obj div:nth-child(2)::before { animation: slide-a 2s ease-in-out 0.5s infinite; }
+.obj div:nth-child(3)::before { animation: slide-a 2s ease-in-out 1s infinite; }
+.obj div:nth-child(4)::before { animation: slide-a 2s ease-in-out 1.5s infinite; }
 
-.obj div:nth-child(1)::after { animation: slide-b 2s ease 0s infinite; }
-.obj div:nth-child(2)::after { animation: slide-b 2s ease 0.5s infinite; }
-.obj div:nth-child(3)::after { animation: slide-b 2s ease 1s infinite; }
-.obj div:nth-child(4)::after { animation: slide-b 2s ease 1.5s infinite; }
+.obj div:nth-child(1)::after { animation: slide-b 2s ease-in-out 0s infinite; }
+.obj div:nth-child(2)::after { animation: slide-b 2s ease-in-out 0.5s infinite; }
+.obj div:nth-child(3)::after { animation: slide-b 2s ease-in-out 1s infinite; }
+.obj div:nth-child(4)::after { animation: slide-b 2s ease-in-out 1.5s infinite; }
 
 @keyframes slide-a {
     0% { transform: scaleY(1); }
